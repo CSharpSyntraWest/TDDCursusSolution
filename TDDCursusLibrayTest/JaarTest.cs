@@ -4,7 +4,7 @@ using TDDCursusLibrary;
 namespace TDDCursusLibrayTest
 {
     [TestFixture]
-    public class JaarTests
+    public class JaarTest
     {
         [Test]
         public void EenJaarDeelbaarDoor400IsEenSchrikkeljaar()

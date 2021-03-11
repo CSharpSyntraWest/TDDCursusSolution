@@ -6,7 +6,7 @@ using TDDCursusLibrary;
 
 namespace TDDCursusLibrayTest
 {
-    public class RekeningTests
+    public class RekeningTest
     {
         private Rekening rekening;
         [SetUp]
