@@ -63,5 +63,6 @@ namespace TDDCursusLibrayTest
             Assert.Throws<ArgumentException>(() => rekening.Storten(testBedrag));
 
         }
+     
     }
 }
