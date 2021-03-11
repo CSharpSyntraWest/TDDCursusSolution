@@ -9,6 +9,10 @@ namespace TDDCursusLibrary
         private decimal hoogsteBod = 0m;
         public void DoeBod(decimal bedrag)
         {
+            if (bedrag <= decimal.Zero)
+            {
+                throw new ArgumentException();
+            }
             if (bedrag > hoogsteBod)
                 hoogsteBod = bedrag;
             //throw new NotImplementedException();

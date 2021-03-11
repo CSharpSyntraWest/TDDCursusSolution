@@ -47,8 +47,12 @@ namespace TDDCursusLibrayTest
         }
         [Test]
         public void EenNegatiefBodMoetEenArgumentExceptionGeven()
-        { 
+        {
             //In te vullen en indien nodig code in Veiling class aanpassen
+            //Arrange 
+            decimal testBod = -100.55m;
+            //Act + Assert
+            Assert.Throws<ArgumentException>(() => veiling.DoeBod(testBod));
         }
     }
 }
