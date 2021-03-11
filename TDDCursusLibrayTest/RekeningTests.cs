@@ -8,11 +8,18 @@ namespace TDDCursusLibrayTest
 {
     public class RekeningTests
     {
+        private Rekening rekening;
+        [SetUp]
+        public void Initialiseer()
+        {
+            //Arrange
+            rekening= new Rekening();
+        }
         [Test]
         public void HetSaldoVanEenNieuweRekeningIsNul()
         {
             //Arrange
-            Rekening rekening = new Rekening();
+           // Rekening rekening = new Rekening();
             //Act
             decimal resultaat = rekening.Saldo; //Unit is Saldo
             //Assert
@@ -22,7 +29,7 @@ namespace TDDCursusLibrayTest
         public void HetSaldoNaEenEersteStortingIsHetBedragVanDieStorting()
         {
             //Arrange
-            Rekening rekening = new Rekening(); //rekening is "SUT" of Sytem Under Test
+            //Rekening rekening = new Rekening(); //rekening is "SUT" of Sytem Under Test
             decimal testBedrag = 2000.55m;
             //Act
             rekening.Storten(testBedrag);
@@ -35,7 +42,7 @@ namespace TDDCursusLibrayTest
         {
             //Oefening: vul de test methode code aan:
             //Arrange
-            Rekening rekening = new Rekening();
+           // Rekening rekening = new Rekening();
             decimal testBedrag1 = 100.50m;
             decimal testBedrag2 = 50.55m;
             //Act
@@ -49,7 +56,7 @@ namespace TDDCursusLibrayTest
         public void EenNegatiefBedragStortenGeeftEenArgumentException()
         {
             //Arrange
-            Rekening rekening = new Rekening();
+           // Rekening rekening = new Rekening();
             decimal testBedrag = -100.50m;
             
             //Act + Assert
