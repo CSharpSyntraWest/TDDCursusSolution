@@ -32,8 +32,29 @@ namespace TDDCursusLibrayTest
         }
         [Test]
         public void HetSaldoNaTweeStortingenIsDeSomVanDeBedragenVanDieStorting()
-        { 
-            //Oefening: vul de test methode code aan
+        {
+            //Oefening: vul de test methode code aan:
+            //Arrange
+            Rekening rekening = new Rekening();
+            decimal testBedrag1 = 100.50m;
+            decimal testBedrag2 = 50.55m;
+            //Act
+            rekening.Storten(testBedrag1);
+            rekening.Storten(testBedrag2);
+            decimal eindSaldo = rekening.Saldo;
+            //Assert
+            Assert.AreEqual(testBedrag1 + testBedrag2, eindSaldo);
+        }
+        [Test]
+        public void EenNegatiefBedragStortenGeeftEenArgumentException()
+        {
+            //Arrange
+            Rekening rekening = new Rekening();
+            decimal testBedrag = -100.50m;
+            
+            //Act + Assert
+            Assert.Throws<ArgumentException>(() => rekening.Storten(testBedrag));
+
         }
     }
 }
